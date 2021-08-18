@@ -1,0 +1,23 @@
+{
+	"name": "NASA-Mission-Control",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"server": "npm run watch --prefix server",
+		"client": "npm start --prefix client",
+		"watch": "npm run server & npm run client",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/zeapherine/NASA-mission-control.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/zeapherine/NASA-mission-control/issues"
+	},
+	"homepage": "https://github.com/zeapherine/NASA-mission-control#readme"
+}
