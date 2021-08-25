@@ -20,16 +20,17 @@ mongoose.connection.on('error', (err) => {
 });
 
 async function startServer() {
-	await mongoose.connect(process.env.MONGO_URL, {
-		useNewUrlParser: true,
-		useUnifiedTopology: true,
-	});
+	try {
+		await mongoose.connect(process.env.MONGO_URL);
 
-	await loadPlanetsData();
+		await loadPlanetsData();
 
-	server.listen(PORT, () => {
-		console.log(`Listening on port ${PORT}....`);
-	});
+		server.listen(PORT, () => {
+			console.log(`Listening on port ${PORT}....`);
+		});
+
+	} catch (e) {
+		console.log(e);
+	}
 }
-
 startServer();
